@@ -1,0 +1,51 @@
+# The sources for the VMCsim device driver:
+
+TARGETNAME=VMCsim
+TARGETPATH=obj
+TARGETTYPE=DRIVER
+
+# Path to the NMSYM utility
+
+NMSYM=Z:\Tools\nmsym.exe
+#NMSYM=F:\devTools\siw2k\softice\nmsym.exe
+
+INCLUDES=..\Include;Include
+
+SOURCES=Driver.c                                    \
+        Debug.c                                     \
+        Queue.c                                     \
+        MainLoop.c                                  \
+        TaskBridge.c                                \
+        ExternalInterrupts.c                        \
+        CPU.c                                       \
+        PCI.c                                       \
+        Pit.c                                       \
+		Dma.c										\
+        Pic.c                                       \
+        IO.c                                        \
+        Memory.c                                    \
+        PIIX4.c                                     \
+        CmosAndRtc.c                                \
+        Keyboard.c                                  \
+        Vga.c                                       \
+        MonochromeAdapter.c                         \
+        Floppy.c                                    \
+		HardDisk.c									\
+        CPUTraps.c                                  \
+        Disassembler.c                              \
+        DisassemblerForScanner.c                    \
+        DisassemblerForVirtualization.c             \
+        ProtectedInstructions.c                     \
+        FaultingInstructions.c                      \
+        Scanner.c                                   \
+        Initialization.c                            \
+        Meta.c                                      \
+        MemoryAllocation.c                          \
+		MemoryAccess.c								\
+		SystemRegions.c								\
+		VmPaging.c									\
+		Translations.c								\
+		fn_iret.c
+
+NTTARGETFILE1=$(TARGETPATH)\*\$(TARGETNAME).NMS
+

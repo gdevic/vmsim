@@ -1,0 +1,42 @@
+// VMgui.odl : type library source for VMgui.exe
+
+// This file will be processed by the MIDL compiler to produce the
+// type library (VMgui.tlb).
+
+[ uuid(43F4CC0D-9B74-4BD8-81B5-B7C73B603DCC), version(1.0) ]
+library VMgui
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+
+	//  Primary dispatch interface for CVMguiDoc
+	
+	[ uuid(99ACA9F5-0952-4997-BFC5-11A4DA37A770) ]
+	dispinterface IVMgui
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CVMguiDoc)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CVMguiDoc)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CVMguiDoc
+	
+	[ uuid(77662953-4886-4234-B188-3FD5FB1F3946) ]
+	coclass Document
+	{
+		[default] dispinterface IVMgui;
+	};
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};
